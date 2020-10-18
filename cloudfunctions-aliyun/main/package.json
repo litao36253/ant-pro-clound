@@ -1,0 +1,17 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-validator": "^3.4.0",
+    "require-directory": "^2.1.1",
+    "tcb-router": "^1.1.2",
+    "uni-id": "file:../common/uni-id"
+  }
+}
