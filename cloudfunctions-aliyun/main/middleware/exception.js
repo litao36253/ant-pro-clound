@@ -13,13 +13,18 @@ module.exports = async (ctx, next) => {
   } catch (error) {
     if (error instanceof ctx.common.HttpException) {
       ctx.body = {
+        code: error.errorCode,
         message: error.message,
-        code: error.errorCode
+        deatil: {
+          path: ctx._req.url,
+          ...error.errorDeatil
+        }
       }
     } else {
+      console.log(error)
       ctx.body = {
-        message: `服务器发生未知错误：${error.message}`,
-        code: 500
+        code: 500,
+        message: `服务器发生未知错误：${error.message}`
       }
     }
   }

@@ -3,11 +3,12 @@ const errorMsg = {
 }
 
 class HttpException extends Error {
-  constructor (errorCode, message) {
+  constructor (errorCode, errorDeatil) {
     super()
     if (errorCode) {
       this.errorCode = errorCode
-      this.message = message || errorMsg[errorCode]
+      this.message = errorMsg[errorCode]
+      this.errorDeatil = errorDeatil || {}
     }
   }
 }
