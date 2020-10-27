@@ -11,7 +11,8 @@ exports.main = async (event, context) => {
     const $url = event.path
     app = new TcbRouter({
       event: {
-        ...JSON.parse(event.body),
+        ...JSON.parse(event.body || '{}'),
+        token: event.headers.token,
         $url
       }
     })

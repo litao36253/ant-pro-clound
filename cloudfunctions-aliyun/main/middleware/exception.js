@@ -5,7 +5,7 @@ module.exports = async (ctx, next) => {
     if (ctx.body) {
       ctx.body = {
         code: 0,
-        data: ctx.body
+        body: ctx.body
       }
     } else {
       throw new ctx.common.HttpException(404)

@@ -1,9 +1,12 @@
 // 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
-// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+
 // {//   "$url": "/auth/login",
-//   "a": "fefe'"
+//   "username": "fefe",
+//   "password": "123456789"
 // }
 
-{  "$url": "/auth/login",
-  "a": "fefe'"
+{  "$url": "/auth/register",
+  "username": "admin",
+  "password": "888888"
 }
